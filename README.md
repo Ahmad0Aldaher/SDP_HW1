@@ -1,6 +1,6 @@
 # SDP_HW1
-software design using python first assignment
-Programming language python 3.7
+#### software design using python first assignment
+#### Programming language python 3.7
 ## files :
 #### - main.py : the main program file
 #### - task1: the first question function decorator
@@ -14,7 +14,7 @@ Programming language python 3.7
 #### - pascal : (draw Pascal triangle)
 #### - func
 #### - funx
-####- funh
+#### - funh
 ### to test any task you need to uncomment the part from the code related to this task and comment the other:
 #### - uncomment the related import statement 
 #### - uncomment the decorator name and comment the other decorators
