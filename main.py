@@ -15,6 +15,11 @@ import cmath
 @decorator_4
 #@decorator_2_1
 def s_quad(a, b, c):
+    """
+    This function calculates the roots for quadratic equation
+    :params a,b,c : the coefficients of the quadratic equation a^2*x+bx+c=0
+    :output: the two roots of the equation
+    """
     z = lambda a, b, c :((-b+cmath.sqrt((b**2-4*a*c)))/(2*a) , (-b-cmath.sqrt((b**2-4*a*c)))/(2*a))
     return z(a, b, c)
 
@@ -25,6 +30,11 @@ def s_quad(a, b, c):
 @decorator_4
 #@decorator_2_1
 def pascal(n):
+    """
+    This function draw pascal triangle
+    :params n : the depth of pascal triangle
+    :output: print pascal triangle
+    """
     for i in range(n):
         print(' ' * (n - i), end='')
         print(' '.join(map(str, str(11 ** i))))
@@ -36,7 +46,9 @@ def pascal(n):
 @decorator_4
 #@decorator_2_1
 def func():
-    #print("I am ready to Start")
+    """
+    This function for testing it just generate a random n number and loop for 10*n
+    """
     result = 0
     n = random.randint(10, 751)
     for i in range(n*10):
@@ -49,7 +61,11 @@ def func():
 @decorator_4
 #@decorator_2_1
 def funx(n=2, m=5):
-    #print("I am ready to do serious stuff")
+    """
+     This function for testing
+    :param n: default value 2
+    :param m: default value 5
+     """
     max_val = float('-inf')
     n = random.randint(10, 751)
     res = [pow(i, 2) for i in range(100000)]
@@ -65,7 +81,7 @@ def funx(n=2, m=5):
 #@decorator_2_1
 def funh(bar1, bar2=""):
     """
-    This function does something useful
+    This function does something useful (just for testing)
     :param bar1: description
     :param bar2: description
     """

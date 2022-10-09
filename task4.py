@@ -2,14 +2,13 @@ import contextlib
 import inspect
 import io
 from time import time
+from datetime import datetime
 
 function_list={}
 
 
 class decorator_4:
-    #function_list = {}
     def __init__(self, func):
-        # global function_list
         self.function = func
         self.count = 0
         self.time = 0.0
@@ -22,15 +21,11 @@ class decorator_4:
             self.time = end_time - start_time
             self.count += 1
             function_list[self.function.__name__] = self.time
-            # print(f' {self.function.__name__} call {self.count} executed in {(self.time):.4f}s')
             f = open(f'{self.function.__name__}.txt', 'w')
             f.write('Name: \t' + self.function.__name__)
             f.write('Type: \t' + str(type(self.function)))
             f.write('Sign: \t' + str(inspect.signature(self.function)))
-            # print("Args: "+str(inspect.getargs(func)))
             f.write('Doc: \t' + str(self.function.__doc__))
-            # print("Name: "+ str(inspect.getargs(func)))
-            # f.write("Source: " + inspect.getsource(self.function))
 
             f.write('Args: \t positional:' + str(args))
             f.write('Args: \t kwarg:' + str(kwargs))
@@ -52,7 +47,7 @@ class decorator_4:
             return result
         except Exception as e:
             f = open(f'log_{self.function.__name__}.log', 'w')
-            f.write(str(e))
+            f.write(f'{datetime.strftime(datetime.now(), f"%y-%m-%d %H:%M:%S: ")}function {self.function.__name__} {e}')
             f.close()
 
 
