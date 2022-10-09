@@ -47,7 +47,7 @@ def pascal(n):
 #@decorator_2_1
 def func():
     """
-    This function for testing it just generate a random n number and loop for 10*n
+    This function for testing it just generate a random  number n and loop for 10*n
     """
     result = 0
     n = random.randint(10, 751)
